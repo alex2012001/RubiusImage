@@ -6,12 +6,16 @@ using UnityEngine.UI;
 
 namespace RubiusImage.Network
 {
-    public class NetworkController : MonoBehaviour
+    public class NetworkController
     {
-        [SerializeField] private AddressConfig addressConfig;
-        
         private int _counter;
-        
+        private readonly AddressConfig _addressConfig;
+
+        public NetworkController(AddressConfig addressConfig)
+        {
+            _addressConfig = addressConfig;
+        }
+
         public void WhenImageReady()
         {
             for (int i = 0; i < 5; i++)
@@ -32,7 +36,7 @@ namespace RubiusImage.Network
                     }
                 });
                 
-                requestGenerator.SendGetTextureRequest(addressConfig.RequestAddress);
+                requestGenerator.SendGetTextureRequest(_addressConfig.RequestAddress);
             }
         }
 
@@ -66,7 +70,7 @@ namespace RubiusImage.Network
                     }
                 });
                 
-                requestGenerator.SendGetTextureRequest(addressConfig.RequestAddress);
+                requestGenerator.SendGetTextureRequest(_addressConfig.RequestAddress);
             }
         }
 
@@ -92,7 +96,7 @@ namespace RubiusImage.Network
                 }
             });
             
-            requestGenerator.SendGetTextureRequest(addressConfig.RequestAddress);
+            requestGenerator.SendGetTextureRequest(_addressConfig.RequestAddress);
         }
     }
 }
