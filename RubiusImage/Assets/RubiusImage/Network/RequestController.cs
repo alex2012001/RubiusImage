@@ -8,11 +8,11 @@ namespace RubiusImage.Network
         [SerializeField] private InterfaceController interfaceController;
         [SerializeField] private AddressConfig addressConfig;
         
-        private NetworkController netController;
+        private NetworkController _netController;
         
         private void Start()
         {
-            netController = new NetworkController(addressConfig);
+            _netController = new NetworkController(addressConfig);
             
             interfaceController.OnLoad += SendRequest;
         }
@@ -22,13 +22,13 @@ namespace RubiusImage.Network
             switch (args.LoadTypes)
             {
                 case LoadTypes.AllAtOnce: 
-                    netController.AllAtOnce();
+                    _netController.AllAtOnce();
                     break;
                 case LoadTypes.OneByOne: 
-                    netController.OneByOne();
+                    _netController.OneByOne();
                     break;
                 case LoadTypes.WhenImageReady: 
-                    netController.WhenImageReady();
+                    _netController.WhenImageReady();
                     break;
             }
         }

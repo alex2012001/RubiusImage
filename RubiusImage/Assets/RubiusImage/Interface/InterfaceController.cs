@@ -1,4 +1,5 @@
 using System;
+using RubiusImage.Interface.Card;
 using RubiusImage.Interface.Dropdown;
 using UnityEngine;
 
@@ -10,10 +11,21 @@ namespace RubiusImage.Interface
         
         [SerializeField] private LoadTypeDropdownController loadTypeDropdownController;
 
+        private bool _isLoad;
         private LoadTypes _loadType;
+        
         public void Load()
         {
+            _isLoad = true;
             OnLoad?.Invoke(this, new InterfaceOnLoadEventArgs(_loadType));
+        }
+
+        public void ResetCardAnimation()
+        {
+            if (_isLoad)
+            {
+                CardStorage.ResetAnimation();
+            }
         }
         
         private void Start()

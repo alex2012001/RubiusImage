@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 49217329}
   - component: {fileID: 49217328}
   - component: {fileID: 49217330}
+  - component: {fileID: 49217331}
   m_Layer: 5
   m_Name: Card (2)
   m_TagString: Untagged
@@ -158,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960.00006, y: -50}
+  m_AnchoredPosition: {x: 960.00006, y: -1000}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &49217328
@@ -211,8 +212,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0949e2b6935504fb18015c335987a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
   cardImage: {fileID: 49217328}
+  id: 2
+--- !u!114 &49217331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49217326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd434e62baf74bab8d3d165c979584a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardView: {fileID: 49217330}
 --- !u!1 &101586237
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -110}
+  m_AnchoredPosition: {x: 0, y: -171}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &535808554
@@ -503,6 +517,7 @@ GameObject:
   - component: {fileID: 638559533}
   - component: {fileID: 638559532}
   - component: {fileID: 638559534}
+  - component: {fileID: 638559535}
   m_Layer: 5
   m_Name: Card (4)
   m_TagString: Untagged
@@ -526,7 +541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1460, y: -50}
+  m_AnchoredPosition: {x: 1460, y: -1000}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &638559532
@@ -579,8 +594,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0949e2b6935504fb18015c335987a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4
   cardImage: {fileID: 638559532}
+  id: 4
+--- !u!114 &638559535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638559530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd434e62baf74bab8d3d165c979584a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardView: {fileID: 638559534}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +1006,7 @@ GameObject:
   - component: {fileID: 1146484003}
   - component: {fileID: 1146484002}
   - component: {fileID: 1146484004}
+  - component: {fileID: 1146484005}
   m_Layer: 5
   m_Name: Card (1)
   m_TagString: Untagged
@@ -1001,7 +1030,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 710.00006, y: -50}
+  m_AnchoredPosition: {x: 710.00006, y: -1000}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146484002
@@ -1054,8 +1083,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0949e2b6935504fb18015c335987a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
   cardImage: {fileID: 1146484002}
+  id: 1
+--- !u!114 &1146484005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146484000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd434e62baf74bab8d3d165c979584a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardView: {fileID: 1146484004}
 --- !u!1 &1169741999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1244,7 @@ GameObject:
   - component: {fileID: 1469876384}
   - component: {fileID: 1469876383}
   - component: {fileID: 1469876385}
+  - component: {fileID: 1469876386}
   m_Layer: 5
   m_Name: Card (3)
   m_TagString: Untagged
@@ -1225,7 +1268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1210, y: -50}
+  m_AnchoredPosition: {x: 1210, y: -1000}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1469876383
@@ -1278,8 +1321,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0949e2b6935504fb18015c335987a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 3
   cardImage: {fileID: 1469876383}
+  id: 3
+--- !u!114 &1469876386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469876381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd434e62baf74bab8d3d165c979584a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardView: {fileID: 1469876385}
 --- !u!1 &1590119456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1491,6 +1547,7 @@ GameObject:
   - component: {fileID: 1901782899}
   - component: {fileID: 1901782898}
   - component: {fileID: 1901782900}
+  - component: {fileID: 1901782901}
   m_Layer: 5
   m_Name: Card
   m_TagString: Untagged
@@ -1514,7 +1571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 460.00006, y: -50}
+  m_AnchoredPosition: {x: 460.00006, y: -1000}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901782898
@@ -1567,8 +1624,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0949e2b6935504fb18015c335987a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
   cardImage: {fileID: 1901782898}
+  id: 0
+--- !u!114 &1901782901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901782896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd434e62baf74bab8d3d165c979584a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardView: {fileID: 1901782900}
 --- !u!1 &2049577780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,6 +1851,90 @@ PrefabInstance:
     - target: {fileID: 5425388745027286386, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388745662587410, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388745662587410, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388745662587410, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2049577785}
+    - target: {fileID: 5425388745662587410, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388745662587410, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ResetCardAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388745662587410, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RubiusImage.Interface.InterfaceController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388745662587410, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746401311570, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746401311570, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746401311570, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2049577785}
+    - target: {fileID: 5425388746401311570, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746401311570, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ResetCardAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746401311570, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RubiusImage.Interface.InterfaceController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746401311570, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746826990449, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746826990449, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746826990449, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2049577785}
+    - target: {fileID: 5425388746826990449, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746826990449, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ResetCardAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746826990449, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: RubiusImage.Interface.InterfaceController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425388746826990449, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49db610bfaf3f9b48bae46a7dafcf681, type: 3}

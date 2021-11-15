@@ -2,7 +2,7 @@
 {
     public class InterfaceOnLoadEventArgs
     {
-        public LoadTypes LoadTypes;
+        public readonly LoadTypes LoadTypes;
 
         public InterfaceOnLoadEventArgs(LoadTypes loadTypes)
         {

@@ -7,9 +7,9 @@ namespace RubiusImage.Interface.Card
 {
     public static class CardStorage
     {
-        private static Dictionary<int, Image> _cardImageStorage = new Dictionary<int, Image>();
+        private static readonly Dictionary<int, CardView> _cardImageStorage = new Dictionary<int, CardView>();
 
-        public static void CardRegistered(int id, Image view)
+        public static void CardRegistered(int id, CardView view)
         {
             if (view != null && !_cardImageStorage.ContainsKey(id))
             {
@@ -17,7 +17,7 @@ namespace RubiusImage.Interface.Card
             }
         }
 
-        public static Image GetCardImage(int id)
+        public static CardView GetCardImage(int id)
         {
             if (!_cardImageStorage.ContainsKey(id))
             {
@@ -25,6 +25,14 @@ namespace RubiusImage.Interface.Card
             }
 
             return _cardImageStorage[id];
+        }
+
+        public static void ResetAnimation()
+        {
+            for (int i = 0; i < _cardImageStorage.Count; i++)
+            {
+                _cardImageStorage[i].OnAnimReset?.Invoke();
+            }
         }
     }
 }

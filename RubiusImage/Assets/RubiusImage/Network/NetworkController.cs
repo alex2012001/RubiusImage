@@ -23,9 +23,11 @@ namespace RubiusImage.Network
                     var card = CardStorage.GetCardImage(_counter);
                     _counter++;
                     
-                    card.sprite = Sprite.Create(args.Texture2D, 
+                    card.cardImage.sprite = Sprite.Create(args.Texture2D, 
                         new Rect(0f, 0f, args.Texture2D.width, args.Texture2D.height),
                         new Vector2(0.5f,0.5f));
+                    
+                    card.OnAnimReady?.Invoke();
                     
                     if (_counter == 5)
                     {
@@ -39,14 +41,14 @@ namespace RubiusImage.Network
 
         public void AllAtOnce()
         {
-            RequestEventArgs[] _requestEventArgs = new RequestEventArgs[5];
+            RequestEventArgs[] requestEventArgs = new RequestEventArgs[5];
             
             for (int i = 0; i < 5; i++)
             {
                 var requestGenerator = new RequestGenerator();
                 requestGenerator.OnEnd += ((sender, args) =>
                 {
-                    _requestEventArgs[_counter] = args;
+                    requestEventArgs[_counter] = args;
                     _counter++;
                     
                     if (_counter >= 5)
@@ -57,10 +59,12 @@ namespace RubiusImage.Network
                             var card = CardStorage.GetCardImage(_counter);
                             _counter++;
                             
-                            card.sprite = Sprite.Create(_requestEventArgs[j].Texture2D, 
-                                new Rect(0f, 0f, _requestEventArgs[j].Texture2D.width, 
-                                    _requestEventArgs[j].Texture2D.height),
+                            card.cardImage.sprite = Sprite.Create(requestEventArgs[j].Texture2D, 
+                                new Rect(0f, 0f, requestEventArgs[j].Texture2D.width, 
+                                    requestEventArgs[j].Texture2D.height),
                                 new Vector2(0.5f,0.5f));
+                            
+                            card.OnAnimReady?.Invoke();
                         }
 
                         _counter = 0;
@@ -79,10 +83,12 @@ namespace RubiusImage.Network
                 var card = CardStorage.GetCardImage(_counter);
                 _counter++;
                 
-                card.sprite = Sprite.Create(args.Texture2D, 
+                card.cardImage.sprite = Sprite.Create(args.Texture2D, 
                     new Rect(0f, 0f, args.Texture2D.width, args.Texture2D.height),
                     new Vector2(0.5f,0.5f));
 
+                card.OnAnimReady?.Invoke();
+                
                 if (_counter < 5)
                 {
                     OneByOne();
