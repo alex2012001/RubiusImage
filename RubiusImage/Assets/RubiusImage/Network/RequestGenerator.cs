@@ -10,18 +10,11 @@ using UnityEngine.Networking.Match;
 
 namespace RubiusImage.Network
 {
-    public class RequestGenerator : MonoBehaviour
+    public class RequestGenerator
     {
         public EventHandler<RequestEventArgs> OnEnd;
         
-        public Image _image;
-
-        private void Start()
-        {
-            SendRequest("https://picsum.photos/200/300");
-        }
-
-        public async Task SendRequest(string url)
+        public async Task SendGetTextureRequest(string url)
         {
             var request = UnityWebRequestTexture.GetTexture(url);
             var operation = request.SendWebRequest();
@@ -30,20 +23,17 @@ namespace RubiusImage.Network
             {
                 await Task.Yield();
             }
-
+            
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log(request.error);
             }
             else
             {
-                var _texture = DownloadHandlerTexture.GetContent(request);
-                _image.sprite = Sprite.Create(_texture, 
-                    new Rect(0f, 0f, _texture.width, _texture.height),
-                    new Vector2(0.5f,0.5f));
+                var texture = DownloadHandlerTexture.GetContent(request);
+                
+                OnEnd?.Invoke(this, new RequestEventArgs(texture));
             }
-            
-            OnEnd?.Invoke(this, new RequestEventArgs(_image));
         }
     }
 }

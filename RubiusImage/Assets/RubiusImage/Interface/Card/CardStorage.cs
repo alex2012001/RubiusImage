@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace RubiusImage.Interface.Card
 {
-    public class CardStorage : MonoBehaviour
+    public static class CardStorage
     {
         private static Dictionary<int, Image> _cardImageStorage = new Dictionary<int, Image>();
 

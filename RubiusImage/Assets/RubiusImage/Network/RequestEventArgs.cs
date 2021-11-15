@@ -1,15 +1,16 @@
 ﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace RubiusImage.Network
 {
     public class RequestEventArgs : EventArgs
     {
-        public Image Image;
+        public Texture2D Texture2D;
 
-        public RequestEventArgs(Image image)
+        public RequestEventArgs(Texture2D texture2D)
         {
-            Image = image;
+            Texture2D = texture2D;
         }
     }
 }
