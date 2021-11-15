@@ -945,8 +945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4d9ccb2fb3c824bbb6978cca39a778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadTypeDropdownController: {fileID: 0}
-  addressConfig: {fileID: 0}
+  interfaceController: {fileID: 2049577785}
+  addressConfig: {fileID: 11400000, guid: 39a3b2c31827f1444b59540e8f481b9d, type: 2}
 --- !u!4 &981464516
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,4 @@
-﻿using RubiusImage.Interface.Dropdown;
-
-namespace RubiusImage.Interface
+﻿namespace RubiusImage.Interface
 {
     public class InterfaceOnLoadEventArgs
     {

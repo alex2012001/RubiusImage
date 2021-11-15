@@ -1,6 +1,5 @@
 using System;
 using RubiusImage.Interface.Dropdown;
-using RubiusImage.Network;
 using UnityEngine;
 
 namespace RubiusImage.Interface

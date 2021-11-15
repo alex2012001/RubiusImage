@@ -1,8 +1,5 @@
-using System;
-using System.Security.Cryptography;
 using RubiusImage.Interface.Card;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace RubiusImage.Network
 {

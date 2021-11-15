@@ -1,6 +1,4 @@
-using System;
 using RubiusImage.Interface;
-using RubiusImage.Interface.Dropdown;
 using UnityEngine;
 
 namespace RubiusImage.Network
@@ -14,11 +12,25 @@ namespace RubiusImage.Network
         
         private void Start()
         {
-           // netController = new NetworkController(addressConfig);
+            netController = new NetworkController(addressConfig);
+            
+            interfaceController.OnLoad += SendRequest;
+        }
 
-           // loadTypeDropdownController.OnAllAtOnceButton += netController.AllAtOnce;
-           // loadTypeDropdownController.OnOneByOneButton += netController.OneByOne;
-           // loadTypeDropdownController.OnWhenImageReadyButton += netController.WhenImageReady;
+        private void SendRequest(object sender, InterfaceOnLoadEventArgs args)
+        {
+            switch (args.LoadTypes)
+            {
+                case LoadTypes.AllAtOnce: 
+                    netController.AllAtOnce();
+                    break;
+                case LoadTypes.OneByOne: 
+                    netController.OneByOne();
+                    break;
+                case LoadTypes.WhenImageReady: 
+                    netController.WhenImageReady();
+                    break;
+            }
         }
     }
 }
